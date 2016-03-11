@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+      <script src="core.js"></script>
+    <title>Doist</title>
+  </head>
+  <body ng-controller="mainController">
+      <div class="container">
+        <div class="jumbotron text-center">
+         <h1>Number of Doist <span class="label label-info">{{ todos.length }}</span></h1>
+       </div>
+
+       <!-- Todo List -->
+       <div id="todo-list" class="row">
+          <div class="col-sm-4 col-sm-offset-4">
+            <div class="checkbox" ng-repeat="todo in todos">
+              <label>
+                <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{todo.text}}
+              </label>
+            </div>
+          </div>
+       </div>
+
+       <!-- From to create Todos -->
+       <div id="todo-form" class="row">
+         <div class="col-sm-8 col-sm-offset-2 text-center">
+           <form>
+             <div class="form-group">
+
+               <!-- Bind this value to formData.txt in angular -->
+               <input type="text" class="form-control input-lg text-center" placeholder="Must to be done by today" ng-model="formData.text">
+             </div>
+
+             <!-- createToDo() will create new todos -->
+             <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+           </form>
+         </div>
+       </div>
+      </div>
+  </body>
+</html>

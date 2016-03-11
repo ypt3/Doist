@@ -1,0 +1,14 @@
+*{ margin: 0px;
+   padding: 0px;
+ }
+
+html  {
+  overflow-y:scroll;
+}
+body  {
+  padding-top:50px;
+ }
+
+#todo-list {
+  margin-bottom:30px;
+}

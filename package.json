@@ -1,0 +1,12 @@
+{
+  "name"         : "doist",
+  "main"         : "server.js",
+  "author"       : "Alan",
+  "dependencies" : {
+    "express"    : "latest",
+    "mongoose"   : "latest",
+    "morgan"     : "latest",
+    "body-parser": "latest",
+    "method-override": "latest"
+    }
+}
